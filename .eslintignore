@@ -1,0 +1,6 @@
+/dist
+/.storybook
+/.yarn
+
+/node_modules
+
