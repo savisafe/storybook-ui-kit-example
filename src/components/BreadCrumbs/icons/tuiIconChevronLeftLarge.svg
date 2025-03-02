@@ -1,0 +1,14 @@
+<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip3_1026">
+			<rect id="24px / tuiIconChevronLeftLarge" width="24.000000" height="24.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="24px / tuiIconChevronLeftLarge" width="24.000000" height="24.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip3_1026)">
+		<path id="Union" d="M15.707 5.29395C16.0977 5.68457 16.0977 6.31738 15.707 6.70801L10.4141 12.001L15.707 17.2939C16.0977 17.6846 16.0977 18.3174 15.707 18.708C15.3164 19.0986 14.6836 19.0986 14.293 18.708L8.29297 12.708C7.90234 12.3174 7.90234 11.6846 8.29297 11.2939L14.293 5.29395C14.6836 4.90332 15.3164 4.90332 15.707 5.29395Z" fill="#313648" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

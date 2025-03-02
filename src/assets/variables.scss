@@ -1,0 +1,65 @@
+// transition
+$transition: 0.3s all ease-in-out;
+
+// Фоны
+$white-02: #fff; // Заливка второстепенного фона страницы, хедера, футера, плиток на основном фоне и заливки иконок на инвертированных фонах
+
+// Компоненты (инпуты, дропдауны, чекбоксы и т.д)
+$stroke_gray: #e8e7e7; // Для обводки компонентов, линий-разделителей
+$stroke-active: #f7500b; // Обводка активных компонентов, иконок в них
+
+// Текста
+$white-label: #fff; // Текст и обводка иконок внутри primary, outline secondary (ховер и прессед) кнопки
+
+// Иконки
+$stroke_white: #fff; // Обводка иконки на темном фоне
+
+// Шрифты
+$font-main: 'Inter', sans-serif;
+
+// Медиа запросы
+$desktop: 1920px;
+$medium-desktop: 1440px;
+$small-desktop: 1024px;
+$tablet: 768px;
+$mobile: 480px;
+
+// Общий ui
+$button-border-radius: 32px;
+
+// Старые используемые цвета
+$grideperle: #c5d3d3;
+$marengo: #485a6a;
+$grey-ship: #a9b9b9;
+$link-water: #d1dcdc;
+$stroke-active-op: #f7500b99;
+$stroke-active-op-custom: #fcb99c;
+$pink: #ffddd9;
+$azure: #ebf2f2;
+$lavender: #e4eeee;
+$lavender-light: #ebecee;
+$gray: #31364880;
+$alice-blue: #f5f9f9;
+$panthone: #347885;
+$neapolitan-blue: #566689;
+$snow-drift: #d7e1e1;
+$lavender-dark-op: #e8eaef80;
+$dark-tin: #989aa3;
+$aspid-gray: #225058;
+$light-gray: #c1c1c1;
+$black-green: #313648;
+$signal-orange: #f7500b;
+$signal-orange-bg: #f7500b33;
+$signal-orange-op: #f7500b99;
+$signal-orange-opacity: #f7500b66;
+$signal-orange-op-custom: #fcb99c;
+$orange-hover: #ff6d31;
+$crimson-red: #ff392e;
+$black: #15171f;
+$black-shadow: rgb(0 0 0 / 12%);
+$medium-jungle-green: #1e222e;
+$signal-black: #333;
+$pattens-blue: #cccfde;
+$gray-pagination: #313648;
+$pearl: #e8e7e7;
+

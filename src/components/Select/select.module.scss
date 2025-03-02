@@ -1,0 +1,193 @@
+.wrap {
+  width: 100%;
+}
+
+.field {
+  position: relative;
+
+  // &:hover {
+  //   .input {
+  //     border: 1px solid #cccfde;
+  //     background: #f5f9f9;
+  //   }
+  // }
+}
+
+.label {
+  position: absolute;
+  z-index: 666;
+  top: 8px;
+  left: 16px;
+  color: #485a6a;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.disabled {
+  pointer-events: none;
+
+  .input {
+    color: #a9b9b9;
+    border: 1px solid #d3cdc5;
+    border-radius: 12px;
+    background: #ebf2f2;
+  }
+
+  .clearBtn svg path {
+    fill: #646a87;
+  }
+
+  .label {
+    color: #a9b9b9;
+  }
+}
+
+.error {
+  .input {
+    border: 1px solid #ff392e;
+    background: rgb(247 80 11 / 10%);
+  }
+
+  .placeholder {
+    color: #ff392e;
+  }
+
+  .clearBtn svg path {
+    fill: #ff392e;
+  }
+
+  .caption {
+    color: #ff392e;
+
+    div {
+      display: block;
+    }
+  }
+
+  .label {
+    color: #ff392e;
+  }
+
+  .selectBtn svg path {
+    fill: #ff392e;
+  }
+
+  &:hover {
+    .input {
+      border: 1px solid #ff392e;
+      background: rgb(247 80 11 / 10%);
+    }
+  }
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 80px 20px 16px;
+  transition: $transition;
+  border: 1px solid $pearl;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  font-family: $font-main;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  caret-color: #1886ff;
+  color: #485a6a;
+
+  &:focus {
+    border: 1px solid #f7500b;
+    background: #fff;
+  }
+}
+
+.openDropdown {
+  border-radius: 12px;
+  border: 1px solid #f7500b;
+}
+
+.inputWithLabel {
+  padding: 28px 80px 8px 16px;
+}
+
+.placeholder {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: 16px;
+  overflow: hidden;
+  max-width: calc(100% - 110px);
+  transition: $transition;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #717171;
+  font-family: $font-main;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.placeholderWithLabel {
+  top: 28px;
+  right: 20px;
+  left: 21px;
+}
+
+.clearBtn {
+  position: absolute;
+  top: 50%;
+  right: 44px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  svg {
+    path {
+      fill: $light-gray;
+      transition: $transition;
+    }
+  }
+}
+
+.selectBtn {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  svg {
+    transition: $transition;
+
+    path {
+      fill: $light-gray;
+      transition: $transition;
+    }
+  }
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  color: #485a6a;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  gap: 4px;
+
+  div {
+    display: none;
+  }
+}
+
+.reverseSelectBtn {
+  svg {
+    transform: rotate(180deg);
+  }
+}

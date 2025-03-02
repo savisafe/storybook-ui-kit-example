@@ -1,0 +1,15 @@
+.item {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 10px 24px;
+  cursor: pointer;
+  color: #313648;
+  font-size: 15px;
+  line-height: 20px;
+
+  &:hover {
+    border-radius: 8px;
+    background: rgb(30 34 46 / 4%);
+  }
+}

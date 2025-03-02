@@ -1,0 +1,19 @@
+.tooltipContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  justify-content: center;
+  width: max-content;
+  margin-left: calc(100%);
+  padding: 4px 8px;
+  text-align: center;
+  white-space: pre-line;
+  pointer-events: none;
+  color: #333;
+  border: 1px solid #333;
+  background-color: white;
+  font-size: 12px;
+}

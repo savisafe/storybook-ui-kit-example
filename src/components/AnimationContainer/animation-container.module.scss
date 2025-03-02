@@ -1,0 +1,44 @@
+.wrapper {
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapperClose {
+  height: 0;
+}
+
+.disableScroll {
+  overflow: hidden;
+}
+
+.shadowOff {
+  position: relative;
+  z-index: 4;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.shadowOn {
+  &:global(.entering) {
+    opacity: 1;
+  }
+
+  &:global(.entered) {
+    opacity: 1;
+  }
+
+  &:global(.exiting) {
+    opacity: 0;
+  }
+
+  &:global(.exited) {
+    opacity: 0;
+  }
+}

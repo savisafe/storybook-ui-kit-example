@@ -1,0 +1,159 @@
+
+.wrap {
+  width: 100%;
+}
+
+.field {
+  position: relative;
+
+  &:hover {
+    .input {
+      border: 1px solid #cccfde;
+      background: rgb(30 34 46 / 4%);
+    }
+
+    .clearBtn svg path {
+      fill: #000;
+    }
+  }
+}
+
+.fieldSelected {
+  .placeholder {
+    top: 8px;
+    left: 16px;
+    color: #485a6a;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+
+  .input {
+    color: #31364880;
+    border: 1px solid #C5D3D3;
+    border-radius: 12px;
+    background: #EBF2F2;
+  }
+
+  .clearBtn svg path {
+    fill: #646a87;
+  }
+}
+
+.error {
+  .input {
+    border: 1px solid #F7500B;
+    background: #FFF;
+  }
+
+  .placeholder {
+    color: #485A6A;
+  }
+
+  .clearBtn svg path {
+    fill: #ff392e;
+  }
+
+  .caption {
+    color: #ff392e;
+
+    div {
+      display: block;
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 16px 16px 16px 54px;
+  transition: $transition;
+  border: 1px solid #c5d3d3;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  font-family: $font-main;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  caret-color: #1886ff;
+
+  &:focus {
+    border: 1px solid #f7500b;
+    background: #fff;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  overflow: hidden;
+  margin: 0;
+  padding-right: 20px;
+  transition: $transition;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #cccfde;
+  font-family: $font-main;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 22px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  svg {
+    display: block;
+
+    path {
+      transition: $transition;
+    }
+  }
+}
+
+.clearBtn {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  svg {
+    display: block;
+
+    path {
+      transition: $transition;
+    }
+  }
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  color: #7f8499;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  gap: 4px;
+
+  div {
+    display: none;
+  }
+}

@@ -1,0 +1,184 @@
+
+.checkbox {
+  font-family: $font-main;
+}
+
+.checkbox_error {
+  .checkInput + .checkSwitch::before {
+    border: 1px solid #ff392e;
+    background: rgb(247 80 11 / 10%);
+  }
+
+  .checkCaption {
+    color: #ff392e;
+  }
+
+  .checkTitle {
+    color: #1e222e;
+  }
+
+  .checkInput:checked + .checkSwitch::before {
+    border: 1px solid #ff392e;
+    background-color: #ff392e;
+  }
+}
+
+.checkbox_disabled {
+  .checkLabel {
+    pointer-events: none;
+  }
+
+  .checkInput + .checkSwitch::before {
+    border: 1px solid #c5d3d3;
+    background: #ebf2f2;
+  }
+
+  .checkTitle {
+    color: #1e222e;
+  }
+
+  .checkCaption {
+    color: #485a6a;
+  }
+
+  .checkInput:checked + .checkSwitch::before {
+    border: 1px solid #d7e1e1;
+    background-color: #d7e1e1;
+    background-image: url('./Icons/tuiIconCheck.svg');
+  }
+}
+
+.checkbox_disabledChecked {
+  .checkLabel {
+    pointer-events: none;
+  }
+
+  .checkInput + .checkSwitch::before {
+    border: 1px solid #d7e1e1;
+    background-color: #d7e1e1;
+    background-image: url('./Icons/tuiIconGrayCheck.svg');
+  }
+
+  .checkTitle {
+    color: #1e222e;
+  }
+
+  .checkCaption {
+    color: #485a6a;
+  }
+}
+
+.checkbox_reverse {
+  .checkBlock,
+  .checkLabel {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
+.checkSwitchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.checkBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkInput {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkSwitch {
+  display: inline-flex;
+  user-select: none;
+}
+
+.checkInput + .checkSwitch::before {
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  content: '';
+  cursor: pointer;
+  transition: $transition;
+  border: 1px solid #cccfde;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.checkInput:checked + .checkSwitch::before {
+  transition: $transition;
+  border: 1px solid #f7500b;
+  background-color: #f7500b;
+  background-image: url('./Icons/tuiIconCheck.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.checkLabel {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  &:hover {
+    .checkSwitch::before {
+      background-color: #f5f9f9;
+    }
+
+    .checkInput:checked + .checkSwitch::before {
+      border: 1px solid #ff6d31;
+      background-color: #ff6d31;
+      background-image: url('./Icons/tuiIconCheck.svg');
+    }
+
+    .checkTitle {
+      color: #1e222e;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgb(30 34 46 / 8%);
+    }
+
+    .checkInput:checked + .checkSwitch::before {
+      border: 1px solid #ff6d31;
+      background-color: #ff6d31;
+      background-image: url('./Icons/tuiIconCheck.svg');
+    }
+
+    .checkTitle {
+      color: #1e222e;
+    }
+  }
+}
+
+.checkTitle {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  transition: $transition;
+  color: #485a6a;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.checkCaption {
+  margin-top: 4px;
+  transition: $transition;
+  color: #485a6a;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}

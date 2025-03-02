@@ -1,0 +1,71 @@
+
+@keyframes fade-in-expand {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-to-0 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 343px;
+  height: 48px;
+  margin-top: 5px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  gap: 8px;
+}
+
+.show {
+  animation: fade-in-expand ease-in-out 0.2s both;
+}
+
+.hide {
+  animation: opacity-to-0 0.3s ease-in-out 0.2s both;
+}
+
+.error {
+  color: #fff;
+  background: #f61818;
+}
+
+.warning {
+  color: #392b10;
+  background: #ffdd9c;
+}
+
+.success {
+  color: #fff;
+  background: #38d188;
+}
+
+.info {
+  color: #fff;
+  background: #73bbfd;
+}

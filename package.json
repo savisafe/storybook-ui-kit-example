@@ -1,0 +1,91 @@
+{
+  "name": "storybook-ui-kit-example",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "publish": "node ./publish-script.js",
+    "test:ui": "npx loki test",
+    "test:ui:ok": "npx loki approve",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/sledopyt-ui.es.js",
+      "require": "./dist/sledopyt-ui.umd.js"
+    },
+    "./styles": "./dist/style.css"
+  },
+  "main": "./dist/sledopyt-ui.umd.js",
+  "module": "./dist/sledopyt-ui.es.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@tippyjs/react": "^4.2.6",
+    "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.5",
+    "tippy.js": "^6.3.7"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.15",
+    "@storybook/addon-interactions": "^7.6.15",
+    "@storybook/addon-links": "^7.6.15",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.15",
+    "@storybook/react": "^7.6.15",
+    "@storybook/react-vite": "^7.6.15",
+    "@storybook/test": "^7.6.15",
+    "@types/classnames": "^2.3.1",
+    "@types/lodash": "^4",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/react-transition-group": "^4.4.10",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-storybook": "^0.6.15",
+    "loki": "^0.35.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.70.0",
+    "storybook": "^7.6.15",
+    "typescript": "5.0.4",
+    "vite": "^5.0.8",
+    "vite-plugin-compression2": "^0.12.0",
+    "vite-plugin-dts": "^3.7.2",
+    "vite-plugin-svgr": "^4.2.0"
+  },
+  "packageManager": "yarn@4.1.0",
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
+  }
+}

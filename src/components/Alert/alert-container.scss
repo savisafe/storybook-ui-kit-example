@@ -1,0 +1,32 @@
+@keyframes fade-in-expand {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-to-0 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.alertContainer {
+  position: fixed;
+  z-index: 9999;
+  top: 10px;
+  right: 10px;
+}

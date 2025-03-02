@@ -1,0 +1,152 @@
+
+.switchBox_checkBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkSwitch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 36px;
+  height: 20px;
+  cursor: pointer;
+  transition: $transition;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: rgb(30 34 46 / 16%);
+
+  &::before {
+    position: absolute;
+    left: 2px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    content: '';
+    transition: 0.15s;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+
+.switchCaption {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+  transition: $transition;
+  color: #7f8499;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.switchBox {
+  font-family: $font-main;
+
+  .switchBox_error {
+    .checkSwitch {
+      border: 1px solid #ff392e;
+    }
+
+    .checkCaption {
+      color: #ff392e;
+    }
+  }
+
+  .switchBox_disabled {
+    .switchLabel {
+      pointer-events: none;
+    }
+
+    .checkSwitch::before {
+      background-color: #646a87;
+    }
+
+    .switchInput:checked + .checkSwitch {
+      background: #ecedee;
+    }
+  }
+
+  .switchLabel {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &:hover {
+      .checkSwitch {
+        background-color: rgb(30 34 46 / 24%);
+      }
+
+      .switchInput:checked + .checkSwitch {
+        background: #ff6d31;
+      }
+    }
+  }
+
+  .switchBox_reverse {
+    .switchLabel,
+    .switchBox_checkBlock {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    .checkCaption {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.switchInput:checked + .checkSwitch {
+  background: #f7500b;
+
+  &::before {
+    transform: translateX(15px);
+  }
+}
+
+.switchInput {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkSwitchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.switchTitle {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  color: #1e222e;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.switchBox_disabledChecked {
+  .switchLabel {
+    pointer-events: none;
+  }
+
+  .switchInput + .checkSwitch::before {
+    border: 1px solid #d7e1e1;
+    background-color: #d7e1e1;
+  }
+
+  .switchTitle {
+    color: #1e222e;
+  }
+
+  .switchCaption {
+    color: #485a6a;
+  }
+}

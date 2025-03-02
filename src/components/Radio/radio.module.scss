@@ -1,0 +1,22 @@
+.radioContainer {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $stroke_gray;
+  border-radius: 50%;
+  background-color: $white-02;
+}
+
+input:checked + .checkmark {
+  border: 6px solid $stroke-active;
+  background-color: $white-02;
+}
